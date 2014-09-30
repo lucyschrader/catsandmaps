@@ -1,0 +1,18 @@
+{% include 'base.html' %}
+{% block content %}
+<div class="container">
+<div class="col-md-8">{{nelson_map.html}}</div>
+<div class="col-md-4"><h2>{{carina.name}} | level {{carina.level}}</h2>
+<img src="static/images/portrait-carina-small.jpg" />
+<ul class="list-unstyled">
+    <li>Action points: {{carina.ap}}</li>
+</ul>
+<h2>Actions</h2>
+<ul class="list-unstyled">
+    {% for k in actions %}
+    <li><a href="/action/{{k}}">{{k}} ({{actions[k]}} AP)</a></li>
+    {% endfor %}
+</ul>
+</div>
+</div>
+{% endblock %}

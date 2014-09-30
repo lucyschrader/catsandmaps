@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dangerous cats! Meow!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+    {% if nelson_map %}{{nelson_map.js}}{% endif %}
+</head>
+<body>
+<div class="container"><h1>Dangerous cats <small>meow</small></h1></div>
+{% block content %}
+{% endblock %}
+</body>

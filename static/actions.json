@@ -1,0 +1,14 @@
+{
+     "actions": [
+          {
+          "id": "scout",
+          "name": "Scout around",
+          "ap_cost": 1
+          },
+          {
+          "id": "deal",
+          "name": "Deal catnip",
+          "ap_cost": 1
+          }
+     ]
+}
