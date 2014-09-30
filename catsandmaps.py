@@ -4,7 +4,7 @@ from flask.ext.googlemaps import Map
 from classes import Cat
 import os, json
 
-application = app = Flask('drugcats')
+application = app = Flask('catsandmaps')
 GoogleMaps(app)
 
 carina = Cat(name='Carina', ap=5, money = 500, level = 1)
@@ -28,10 +28,10 @@ def home():
 def select_cat():
     return render_template('select.html')
 
-@app.route('/actions/<do>')
-def use_action(do):
-    carina.do()
-    return redirect(url_for('home'))
+@app.route('/<action>')
+def use_action(action):
+    carina.do(action)
+    return redirect(url_for('home')) 
 
 #def take_turn(ap):
 #    while ap > 0:
